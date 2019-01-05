@@ -2,7 +2,7 @@
 
 USERNAME=wopauli@microsoft.com
 
-AZURE_REGION=westus
+REGION=westus
 
 FILE=token.txt
 
@@ -17,7 +17,7 @@ fi
 
 echo "Using access token: $token"
 
-# curl -n -o notebooks.dbc   'https://${AZURE_REGION}.azuredatabricks.net/api/2.0/workspace/export?path=/Users/$USERNAME/notebooks&direct_download=true&format=DBC' -H "Authorization: Bearer ${token}"
+curl -n -o notebooks.dbc   https://${REGION}.azuredatabricks.net/api/2.0/workspace/export\?path=/Users/$USERNAME/notebooks\&direct_download=true\&format=DBC -H "Authorization: Bearer ${token}"
 
 # Here are some further instructions
 
