@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # You can use this script to export a folder (containing notebooks, or
-# folders of notebooks) from ADB, as a DBC archive, so you can then
+# folders of notebooks) from ADB as a DBC archive, so you can then
 # unzip the archive and add the individual notebooks to version
 # control.  Adding the notebooks individually enables text-based
 # version control, which makes it easier to see the actual changes to
