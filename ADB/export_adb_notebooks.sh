@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # You can use this script to export a folder (containing notebooks, or
 # folders of notebooks) from ADB as a DBC archive, so you can then
 # unzip the archive and add the individual notebooks to version
@@ -35,4 +33,4 @@ curl -n -o notebooks.dbc   https://${REGION}.azuredatabricks.net/api/2.0/workspa
 # > zip -r -n python notebooks notebooks
 
 # To import this new archive into databricks, use curl again
-# > curl -n -F path=/Users/${USERNAME}/notebooks -F format=DBC -F content=@notebooks.dbc https://${AZURE_REGION}.azuredatabricks.net/api/2.0/workspace/import  -H "Authorization: Bearer ${token}"
+# >  curl -n -F path=/Users/${USERNAME}/notebooks -F format=DBC -F content=@notebooks.dbc https://${REGION}.azuredatabricks.net/api/2.0/workspace/import  -H "Authorization: Bearer ${token}"
