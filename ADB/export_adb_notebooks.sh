@@ -30,7 +30,7 @@ curl -n -o notebooks.dbc   https://${REGION}.azuredatabricks.net/api/2.0/workspa
 # > unzip notebooks.dbc
 
 # To create a dbc archive of folders, just create a zip file without compressing python notebooks (-n option)
-# > zip -r -n python notebooks notebooks
+# > zip -r -n python notebooks.dbc notebooks
 
 # To import this new archive into databricks, use curl again
-# >  curl -n -F path=/Users/${USERNAME}/notebooks -F format=DBC -F content=@notebooks.dbc https://${REGION}.azuredatabricks.net/api/2.0/workspace/import  -H "Authorization: Bearer ${token}"
+# > curl -n -F path=/Users/${USERNAME}/notebooks -F format=DBC -F content=@notebooks.dbc https://${REGION}.azuredatabricks.net/api/2.0/workspace/import  -H "Authorization: Bearer ${token}"
