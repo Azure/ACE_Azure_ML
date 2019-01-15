@@ -1,4 +1,0 @@
-token=$(cat token.txt)
-
-curl -n -o notebooks.dbc   'https://westus.azuredatabricks.net/api/2.0/workspace/export?path=/Users/wopauli@microsoft.com/notebooks&direct_download=true&format=DBC' -H "Authorization: Bearer ${token}"
-
