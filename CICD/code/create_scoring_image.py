@@ -24,7 +24,7 @@ model_list = Model.list(workspace=ws)
 model, = (m for m in model_list if m.version==model_version and m.name==model_name)
 print('Model picked: {} \nModel Description: {} \nModel Version: {}'.format(model.name, model.description, model.version))
 
-os.chdir('./code/scoring')
+os.chdir('./CICD/code/scoring')
 image_name = "predmaintenance-model-score"
 
 image_config = ContainerImage.image_configuration(execution_script = "score.py",
