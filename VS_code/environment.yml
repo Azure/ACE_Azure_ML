@@ -1,0 +1,13 @@
+name: learnai-aml
+
+dependencies:
+  - python=3.6.1
+  
+  - pip:
+    - azureml-sdk[automl]
+    - torch
+    - torchvision
+    - pylint
+    - matplotlib
+    - seaborn
+    

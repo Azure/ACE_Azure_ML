@@ -1,0 +1,13 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+- python=3.6.2
+- pip:
+  - scikit-learn==0.19.1
+  - azureml-sdk[automl]
+  - azureml-monitoring
+  - pyculiarity
+  - scipy
+  - numpy
+  - pandas
