@@ -73,7 +73,7 @@ telemetry = pd.read_csv(os.path.join(data_dir, 'telemetry.csv'))
 print("Done.")
 
 print("Adding incremental data...")
-telemetry_incremental = pd.read_csv(os.path.join('data_sample/', 'telemetry_incremental.csv'))
+telemetry_incremental = pd.read_csv(os.path.join('CICD/data_sample/', 'telemetry_incremental.csv'))
 telemetry = telemetry.append(telemetry_incremental, ignore_index=True)
 print("Done.")
 
