@@ -99,7 +99,7 @@ print("Anomaly data object created")
 
 anom_detect = PythonScriptStep(name="anomaly_detection",
                                # script_name="anom_detect.py",
-                               script_name="code/anom_detect.py",
+                               script_name="CICD/code/anom_detect.py",
                                arguments=["--output_directory", anomaly_data],
                                outputs=[anomaly_data],
                                compute_target=aml_compute, 
@@ -111,7 +111,7 @@ print("Anomaly Detection Step created.")
 
 automl_step = PythonScriptStep(name="automl_step",
                                 # script_name="automl_step.py", 
-                                script_name="code/automl_step.py", 
+                                script_name="CICD/code/automl_step.py", 
                                 arguments=["--input_directory", anomaly_data],
                                 inputs=[anomaly_data],
                                 # outputs=[model],
