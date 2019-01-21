@@ -21,11 +21,6 @@ print('Workspace name: ' + ws.name,
       'Subscription id: ' + ws.subscription_id, 
       'Resource group: ' + ws.resource_group, sep = '\n')
 
-#workspace_name = 'predmaintws'
-#resource_group = 'wopauli_AD'
-#subscription_id = '5be49961-ea44-42ec-8021-b728be90d58c'
-#workspace_region = 'eastus2'
-
 # ws = Workspace.create(name = workspace_name,
 #                       subscription_id = subscription_id,
 #                       resource_group = resource_group,
