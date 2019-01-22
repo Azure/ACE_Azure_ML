@@ -27,8 +27,7 @@ curl -n -o notebooks.dbc   https://${REGION}.azuredatabricks.net/api/2.0/workspa
 # Here are some further instructions
 
 # To extract the content of the archive, simply use unzip:
-# >
-unzip notebooks.dbc
+# > unzip notebooks.dbc
 
 # To create a dbc archive of folders, just create a zip file without compressing python notebooks (-n option)
 # > zip -r -n python notebooks.dbc notebooks
