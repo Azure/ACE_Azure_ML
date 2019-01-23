@@ -28,9 +28,9 @@ This content can roughly be devided into 3 parts.  The first part of this be per
 
 Use the following links to get to the right entry point for the different parts:
 
-- Part 1: Azure Databricks and its integration with Azure Machine Learning Services: [Readme](./ADB/Readme.md)
+- Part 1: Azure Databricks and its integration with Azure Machine Learning Services: [Readme](./ADB/README.md) (not yet available)
 - Part 2: Continuous Integration and Continuous Delivery (CI/CD): [Readme](./CICD/README.md)
-- Part 3: Deep learning with Azure Machine Learning Services using VS Code: [Readme](./DeepLearning/Readme.md)
+- Part 3: Deep learning with Azure Machine Learning Services using VS Code: [Readme](./DeepLearning/README.md)
 
 ## API references
 
