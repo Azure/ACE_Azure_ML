@@ -2,12 +2,12 @@ name: learnai-aml
 
 dependencies:
   - python=3.6.1
-  
+
   - pip:
     - azureml-sdk[automl]
-    - torch
+    - https://download.pytorch.org/whl/cu90/torch-1.0.0-cp36-cp36m-win_amd64.whl
     - torchvision
     - pylint
     - matplotlib
     - seaborn
-    
+    - pyculiarity
