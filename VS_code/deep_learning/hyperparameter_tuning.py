@@ -65,7 +65,7 @@ print(compute_target.get_status().serialize())
 
 import os
 
-project_folder = './VS_code/deep_learning/pytorch-hymenoptera'
+project_folder = './pytorch-hymenoptera'
 os.makedirs(project_folder, exist_ok=True)
 
 # Create an experiment
