@@ -1,5 +1,8 @@
 import os
 import azureml.core
+import pandas as pd
+import json
+
 from azureml.core import Workspace, Run, Experiment, Datastore
 from azureml.core.compute import AmlCompute
 from azureml.core.compute import ComputeTarget
@@ -11,45 +14,42 @@ from azureml.telemetry import set_diagnostics_collection
 from azureml.pipeline.steps import PythonScriptStep
 from azureml.pipeline.core import Pipeline, PipelineData, StepSequence
 
-import pandas as pd
-import json
 
 print("SDK Version:", azureml.core.VERSION)
 
-ws = Workspace.from_config('VS_code/config.json')
+ws = Workspace.from_config('../config.json')
 print('Workspace name: ' + ws.name, 
       'Subscription id: ' + ws.subscription_id, 
-      'Resource group: ' + ws.resource_group, sep = '\n')
+      'Resource group: ' + ws.resource_group,
+      'Location: ' + ws.location, sep = '\n')
 
-experiment_name =  'pred-maint-automl' # choose a name for experiment
-project_folder = '.' # project folder
+experiment_name =  'learnai-pipeline-demostration' # choose a name for experiment
+project_folder = '.' # directory where python scripts for pipeline steps are located
 
 experiment=Experiment(ws, experiment_name)
-print("Location:", ws.location)
-output = {}
-output['SDK version'] = azureml.core.VERSION
-output['Subscription ID'] = ws.subscription_id
-output['Workspace'] = ws.name
-output['Resource Group'] = ws.resource_group
-output['Location'] = ws.location
-output['Project Directory'] = project_folder
-output['Experiment Name'] = experiment.name
-pd.set_option('display.max_colwidth', -1)
-pd.DataFrame(data=output, index=['']).T
+# print("Location:", ws.location)
+# output = {}
+# output['SDK version'] = azureml.core.VERSION
+# output['Subscription ID'] = ws.subscription_id
+# output['Workspace'] = ws.name
+# output['Resource Group'] = ws.resource_group
+# output['Location'] = ws.location
+# output['Project Directory'] = project_folder
+# output['Experiment Name'] = experiment.name
+# pd.set_option('display.max_colwidth', -1)
+# pd.DataFrame(data=output, index=['']).T
 
 set_diagnostics_collection(send_diagnostics=True)
 
-print("SDK Version:", azureml.core.VERSION)
 
 cd = CondaDependencies.create(pip_packages=["azureml-train-automl", "pyculiarity", "pytictoc"]) # "pandas", "numpy", 
 
-# Runconfig
+# Runconfig for AML Compute
 amlcompute_run_config = RunConfiguration(framework="python", conda_dependencies=cd)
 amlcompute_run_config.environment.docker.enabled = False
 amlcompute_run_config.environment.docker.gpu_support = False
 amlcompute_run_config.environment.docker.base_image = DEFAULT_CPU_IMAGE
 amlcompute_run_config.environment.spark.precache_packages = False
-
 
 # create AML compute
 aml_compute_target = "aml-compute"
@@ -86,7 +86,7 @@ print("Anomaly data object created")
 
 anom_detect = PythonScriptStep(name="anomaly_detection",
                                # script_name="anom_detect.py",
-                               script_name="CICD/code/anom_detect.py",
+                               script_name="anom_detect.py",
                                arguments=["--output_directory", anomaly_data],
                                outputs=[anomaly_data],
                                compute_target=aml_compute, 
@@ -98,10 +98,9 @@ print("Anomaly Detection Step created.")
 
 automl_step = PythonScriptStep(name="automl_step",
                                 # script_name="automl_step.py", 
-                                script_name="CICD/code/automl_step.py", 
+                                script_name="automl_step.py", 
                                 arguments=["--input_directory", anomaly_data],
                                 inputs=[anomaly_data],
-                                # outputs=[model],
                                 compute_target=aml_compute, 
                                 source_directory=project_folder,
                                 allow_reuse=True,

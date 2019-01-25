@@ -11,3 +11,5 @@ dependencies:
     - matplotlib
     - seaborn
     - pyculiarity
+    - pytictoc
+    
