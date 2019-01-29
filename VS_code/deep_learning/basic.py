@@ -1,6 +1,6 @@
 
 import os 
-os.chdir('VS_code/deep_learning/')
+# os.chdir('VS_code/deep_learning/')
 
 import azureml.core
 
