@@ -22,7 +22,6 @@ The repo is organized as follows:
     code
     code/testing/
     code/scoring/
-    code/aml_config/
     data_sample
     azure-pipelines.yml
 ```
