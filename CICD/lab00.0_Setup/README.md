@@ -61,7 +61,7 @@ After you create your project in Azure DevOps, you can begin coding with Git. To
     git clone https://github.com/azure/learnai-customai-airlift
 ````
 
-Copy the content of the cicd folder from our repo into your cloned repository. For example:
+Copy the content from our repo into your cloned repository. For example:
 ````
     cp -r learnai-customai-airlift/* <your repository>
 ````
