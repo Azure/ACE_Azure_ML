@@ -45,7 +45,7 @@ After you create your project in Azure DevOps, you can begin coding with Git. To
 
 1. The simplest way is to import using the `import` wizard found in Repos -> Files -> Import as shown below. Provide the clone url (https://github.com/azure/learnai-customai-airlift) in the wizard to import.
 
-![Generate Token](images/gitImport.png)
+![Generate Token](images/importGit.png)
 
 2. The alternative way is to use a git client to clone the learnai repo to your computer. Cloning a repo creates a complete local copy of the repo for you to work with. Cloning also downloads all commits and branches in the repo, and sets up a named relationship with the repo on the server.
 
