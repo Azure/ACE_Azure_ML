@@ -40,7 +40,7 @@ image = Image.create(name = image_name,
                      workspace = ws)
 
 image.wait_for_creation(show_output = True)
-os.chdir('../..')
+os.chdir('..')
 
 if image.creation_state != 'Succeeded':
   raise Exception('Image creation status: {image.creation_state}')
