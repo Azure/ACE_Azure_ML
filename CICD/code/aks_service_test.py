@@ -9,6 +9,7 @@ from azureml.core.webservice import Webservice
 
 # Get workspace
 ws = Workspace.from_config()
+os.chdir('./CICD')
 
 # Get the AKS Details
 try:
