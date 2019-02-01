@@ -69,7 +69,7 @@ After you create your project in Azure DevOps, you can begin coding with Git. To
 
 Copy the content from our repo into your cloned repository. For example:
 ````
-    cp -r learnai-customai-airlift/* <your repository>
+    cp -r learnai-customai-airlift/cicd/* <your repository>
 ````
 
 Then change directory into your repository, include all the files you just added to be tracked by git, and commit and push your repository to the remote location on ```dev.azure.com```.
