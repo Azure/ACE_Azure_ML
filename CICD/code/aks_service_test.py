@@ -9,9 +9,9 @@ from azureml.core.webservice import Webservice
 
 # Get workspace
 ws = Workspace.from_config()
-os.chdir('./CICD')
 
 # Get the AKS Details
+os.chdir('./CICD')
 try:
     with open("aml_config/aks_webservice.json") as f:
         config = json.load(f)
