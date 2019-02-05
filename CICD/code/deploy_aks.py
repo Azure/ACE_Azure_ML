@@ -10,7 +10,6 @@ from azureml.core.webservice import Webservice, AksWebservice
 ws = Workspace.from_config()
 
 # Get the Image to deploy details
-os.chdir('./CICD')
 try:
     with open("aml_config/image.json") as f:
         config = json.load(f)

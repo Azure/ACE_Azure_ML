@@ -52,7 +52,7 @@ try:
     print('Found existing compute target.')
 except ComputeTargetException:
     print('Creating a new compute target...')
-    compute_config = AmlCompute.provisioning_configuration(vm_size='STANDARD_NC6', 
+    compute_config = AmlCompute.provisioning_configuration(vm_size='Standard_NC6', 
                                                             max_nodes=4,
                                                             idle_seconds_before_scaledown=1800)
 

@@ -18,7 +18,7 @@ try:
 except:
     print('No new model, thus no deployment on ACI')
     #raise Exception('No new model to register as production model perform better')
-    sys.exit(0)
+sys.exit(0)
 
 service_name = config['aks_service_name']
 # Get the hosted web service 

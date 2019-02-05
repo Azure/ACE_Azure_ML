@@ -41,13 +41,7 @@ Create a Private project by providing a `Project name`. With private projects, o
 
 ### Repository
 
-After you create your project in Azure DevOps, you can begin coding with Git. To work with a Git repo, there are a couple of different ways you can bring content into your repo:
-
-1. The simplest way is to import using the `import` wizard found in Repos -> Files -> Import as shown below. Provide the clone url (https://github.com/azure/learnai-customai-airlift) in the wizard to import.
-
-![Generate Token](images/importGit.png)
-
-2. The alternative way is to use a git client to clone the learnai repo to your computer. Cloning a repo creates a complete local copy of the repo for you to work with. Cloning also downloads all commits and branches in the repo, and sets up a named relationship with the repo on the server.
+After you create your project in Azure DevOps, you can begin coding with Git. To work with a Git repo, you clone it to your computer. Cloning a repo creates a complete local copy of the repo for you to work with. Cloning also downloads all commits and branches in the repo, and sets up a named relationship with the repo on the server.
 
 - Open the project for your organization, and select Repos.
 - In this lab, we will use `Personal access tokens` which is very easy to setup and very secure. Select `Generate Git Credentials` and then `Create a Personal access token`.
@@ -67,7 +61,7 @@ After you create your project in Azure DevOps, you can begin coding with Git. To
     git clone https://github.com/azure/learnai-customai-airlift
 ````
 
-Copy the content from our repo into your cloned repository. For example:
+Copy the content of the cicd folder from our repo into your cloned repository. For example:
 ````
     cp -r learnai-customai-airlift/cicd/* <your repository>
 ````

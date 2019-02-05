@@ -12,4 +12,5 @@ dependencies:
     - seaborn
     - pyculiarity
     - pytictoc
+    - numpy
     
