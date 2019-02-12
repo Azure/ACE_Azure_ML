@@ -4,7 +4,7 @@
 
 ### Software Installation
 
-![vs code logo](code.png =25x25) Visual Studio Code
+![vs code logo](./code.png =25x25) Visual Studio Code
 
 - Binaries available here [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - Extensions:
