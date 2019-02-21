@@ -5,9 +5,8 @@ This material should enable you to learn how to combine the strengths of Azure D
 
 For this purpose, we will use a real-world scenario for anomaly detection and predictive maintenance on factory floors. This use-case scenario was selected based on popular demand by the field, and its applicability across industry verticals.
 
-### Agenda
-
-||
+|Agenda|
+|----|
 | Machine Learning on Azure |
 | Data Prep w/ ADB (1; Hands On) |
 | Data Prep w/ ADB (2; Hands On) |
