@@ -8,7 +8,6 @@ For this purpose, we will use a real-world scenario for anomaly detection and pr
 ### Agenda
 
 ||
-|----|
 | Machine Learning on Azure |
 | Data Prep w/ ADB (1; Hands On) |
 | Data Prep w/ ADB (2; Hands On) |
