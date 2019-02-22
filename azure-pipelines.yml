@@ -21,7 +21,7 @@ steps:
     updateConda: false
     createOptions: 'cython==0.29 urllib3<1.24'
 - script: |
-    pip install --user azureml.defaults azureml-sdk[automl,notebooks]==1.0.8 scipy scikit-learn pyculiarity pytictoc
+    pip install --user azureml-sdk[automl,notebooks]==1.0.8 scipy scikit-learn pyculiarity pytictoc
   displayName: 'Install prerequisites'
 - task: PythonScript@0
   displayName: 'Train on Local Env'
