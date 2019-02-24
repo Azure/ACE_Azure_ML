@@ -17,7 +17,7 @@ For this purpose, we will use a real-world scenario for anomaly detection and pr
 
 To get started, click [here](https://github.com/Azure/LearnAI-CustomAI-Airlift/blob/master/ADB/Readme.md)
 
-[Launch Lab] (http://bit.ly/2V3UA8a)
+[Launch Lab](http://bit.ly/2V3UA8a)
 
 ### API references
 
