@@ -47,11 +47,17 @@ steps:
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/create_scoring_image.py'
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/aks_service_test.py'
+  displayName: 'Azure CLI CICD/code/deploy_aci.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/aks_service_test.py'
+    inlineScript: 'python CICD/code/deploy_aci.py'
+- task: AzureCLI@1
+  displayName: 'Azure CLI CICD/code/aci_service_test.py'
+  inputs:
+    azureSubscription: 'serviceConnection'
+    scriptLocation: inlineScript
+    inlineScript: 'python CICD/code/aci_service_test.py'
 - script: |
     python CICD/code/testing/data_test.py CICD/data_sample/predmain_bad_schema.csv
   displayName: 'Test Schema'
