@@ -1,3 +1,6 @@
+#ignore ADB folder during publish
+ADB/
+
 token.txt
 config.json
 train.csv 
