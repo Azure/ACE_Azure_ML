@@ -22,9 +22,7 @@ fi
 
 echo "Using access token: $token"
 
-# curl -n -o notebooks.dbc   https://${REGION}.azuredatabricks.net/api/2.0/workspace/export\?path=/Users/$USERNAME/notebooks\&direct_download=true\&format=DBC -H "Authorization: Bearer ${token}"
-
-curl -n -o my.ipynb https://westus.azuredatabricks.net/api/2.0/workspace/export\?path=/Users/wopauli@microsoft.com/notebooks/day_2/02_random_forests\&direct_download=true\&format=JUPYTER -H "Authorization: Bearer ${token}"
+# curl -n -o notebooks.dbc https://${REGION}.azuredatabricks.net/api/2.0/workspace/export\?path=/Users/$USERNAME/notebooks\&direct_download=true\&format=DBC -H "Authorization: Bearer ${token}"
 
 # Here are some further instructions
 
