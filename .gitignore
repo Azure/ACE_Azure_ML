@@ -2,5 +2,4 @@ token.txt
 config.json
 train.csv 
 test.csv 
-sample_submission.csv 
-mnt_blob_rw.ipynb
+sample_submission.csv
