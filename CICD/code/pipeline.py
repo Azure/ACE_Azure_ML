@@ -22,7 +22,7 @@ print('Workspace name: ' + ws.name,
       'Resource group: ' + ws.resource_group, sep = '\n')
 
 
-experiment_name =  'pred-maint-automl' # choose a name for experiment
+experiment_name =  'aml-pipeline_cicd' # choose a name for experiment
 project_folder = '.' # project folder
 
 experiment=Experiment(ws, experiment_name)
