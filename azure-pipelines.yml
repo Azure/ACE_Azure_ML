@@ -20,7 +20,7 @@ steps:
     updateConda: false
     createOptions: 'cython==0.29 urllib3<1.24'
 - script: |
-    pip install --user azureml.defaults azureml-sdk[automl,notebooks] scipy scikit-learn pyculiarity pytictoc
+    pip install --user azureml-sdk[automl,notebooks] scipy scikit-learn pyculiarity pytictoc
   displayName: 'Install prerequisites'
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/pipeline.py'
