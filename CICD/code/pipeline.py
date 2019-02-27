@@ -42,7 +42,7 @@ set_diagnostics_collection(send_diagnostics=True)
 
 print("SDK Version:", azureml.core.VERSION)
 
-CondaDependencies.create(pip_packages=["azureml-sdk==1.0.17", "azureml-train-automl==1.0.17", "pyculiarity", "pytictoc", "cryptography==2.5", "pandas"]) 
+cd = CondaDependencies.create(pip_packages=["azureml-sdk==1.0.17", "azureml-train-automl==1.0.17", "pyculiarity", "pytictoc", "cryptography==2.5", "pandas"]) 
 
 # Runconfig
 amlcompute_run_config = RunConfiguration(framework="python", conda_dependencies=cd)
