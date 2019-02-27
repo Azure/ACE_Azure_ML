@@ -5,12 +5,14 @@ steps:
   inputs:
     versionSpec: 3.5
     architecture: 'x64'
+
 - task: DownloadSecureFile@1
   inputs:
     name: configFile
     secureFile: config.json
 - script: echo "Printing the secure file path" 
 - script: cp $(Agent.TempDirectory)/config.json $(Build.SourcesDirectory)
+
 - task: CondaEnvironment@1
   displayName: 'Create Conda Environment '
   inputs:
@@ -22,36 +24,42 @@ steps:
 - script: |
     pip install --user azureml-sdk[automl,notebooks] scipy scikit-learn pyculiarity pytictoc
   displayName: 'Install prerequisites'
+
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/pipeline.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/pipeline.py'
+
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/evaluate_model.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/evaluate_model.py'
+
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/register_model.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/register_model.py'
+
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/create_scoring_image.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/create_scoring_image.py'
+
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/deploy_aci.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
     inlineScript: 'python CICD/code/deploy_aci.py'
+    
 - task: AzureCLI@1
   displayName: 'Azure CLI CICD/code/aci_service_test.py'
   inputs:
