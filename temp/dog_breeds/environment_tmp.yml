@@ -1,0 +1,16 @@
+name: learnai-hackathon
+
+dependencies:
+  - python=3.6
+  - ipywidgets
+  - nb_conda
+  - nb_conda_kernels
+  
+  - pip:
+    - azureml-sdk[notebooks,contrib]
+    - https://download.pytorch.org/whl/cu90/torch-1.0.0-cp36-cp36m-win_amd64.whl
+    - torchvision
+    - scikit-image
+    - tensorflow
+    - tensorboardX
+    

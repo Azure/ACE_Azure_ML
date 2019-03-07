@@ -1,0 +1,9 @@
+name: learnai-hackathon
+
+dependencies:
+  - python=3.6
+
+  - pip:
+    - azureml-sdk[notebooks,contrib]
+    - https://download.pytorch.org/whl/cu90/torch-1.0.0-cp36-cp36m-win_amd64.whl
+    - torchvision
