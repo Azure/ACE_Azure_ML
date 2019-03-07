@@ -46,6 +46,7 @@ import os
 def download_data():
     os.makedirs('../data', exist_ok = True)
     container = 'https://sethmottstore.blob.core.windows.net/predmaint/'
+    
     urllib.request.urlretrieve(container + 'telemetry.csv', filename='../data/telemetry.csv')
     urllib.request.urlretrieve(container + 'maintenance.csv', filename='../data/maintenance.csv')
     urllib.request.urlretrieve(container + 'machines.csv', filename='../data/machines.csv')
@@ -53,6 +54,7 @@ def download_data():
     # we replace errors.csv with anoms.csv (results from running anomaly detection)
     # urllib.request.urlretrieve(container + 'errors.csv', filename='../data/errors.csv')
     urllib.request.urlretrieve(container + 'anoms.csv', filename='../data/anoms.csv')
+    
     df_telemetry = pd.read_csv('../data/telemetry.csv', header=0)
     df_telemetry['datetime'] = pd.to_datetime(df_telemetry['datetime'], format="%m/%d/%Y %I:%M:%S %p")
     df_errors = pd.read_csv('../data/anoms.csv', header=0)
@@ -69,7 +71,9 @@ def download_data():
     df_errors['errorID'] = df_errors['errorID'].apply(lambda x: int(x[-1]))
     df_maint['comp'] = df_maint['comp'].apply(lambda x: int(x[-1]))
     df_fails['failure'] = df_fails['failure'].apply(lambda x: int(x[-1]))
+    
     return df_telemetry, df_errors, df_subset, df_fails, df_maint, df_machines
+
 
 def get_datetime_diffs(df_left, df_right, catvar, prefix, window, on, lagon = None, diff_type = 'timedelta64[h]', validate = 'one_to_one', show_example = True):
     keys = ['machineID', 'datetime']
@@ -104,6 +108,7 @@ def get_datetime_diffs(df_left, df_right, catvar, prefix, window, on, lagon = No
         print(df.loc[df.index.isin(range(idx-3, idx+5)), ['datetime', col, 'd' + col]])    
     return df
 
+
 def get_rolling_aggregates(df, colnames, suffixes, window, on, groupby, lagon = None):
     """
     calculates rolling averages and standard deviations
@@ -137,7 +142,6 @@ def get_rolling_aggregates(df, colnames, suffixes, window, on, groupby, lagon = 
     return df_res
  
 
-
 parser = argparse.ArgumentParser("automl_train")
 
 parser.add_argument("--input_directory", type=str, help="input directory")
@@ -150,14 +154,9 @@ run = Run.get_context()
 ws = run.experiment.workspace
 def_data_store = ws.get_default_datastore()
 
-
 # Choose a name for the experiment and specify the project folder.
 experiment_name = 'automl-local-classification'
 project_folder = '.'
-
-
-
-
 experiment = Experiment(ws, experiment_name)
 print("Location:", ws.location)
 output = {}
@@ -191,9 +190,9 @@ df_join.head()
 df_left = df_telemetry.loc[:, ['datetime', 'machineID']] # we set this aside to this table to join all our results with
 
 # this will make it easier to automatically create features with the right column names
-#df_errors['errorID'] = df_errors['errorID'].apply(lambda x: int(x[-1]))
-#df_maint['comp'] = df_maint['comp'].apply(lambda x: int(x[-1]))
-#df_fails['failure'] = df_fails['failure'].apply(lambda x: int(x[-1]))
+# df_errors['errorID'] = df_errors['errorID'].apply(lambda x: int(x[-1]))
+# df_maint['comp'] = df_maint['comp'].apply(lambda x: int(x[-1]))
+# df_fails['failure'] = df_fails['failure'].apply(lambda x: int(x[-1]))
 
 cols_to_average = df_telemetry.columns[-4:]
 
@@ -266,23 +265,20 @@ X_test = df_all.loc[df_all['datetime'] > '2015-10-15', ].drop(X_drop, axis=1)
 y_test = df_all.loc[df_all['datetime'] > '2015-10-15', Y_keep]
 
 
-azureml.train.automl.constants.Metric.CLASSIFICATION_PRIMARY_SET
-
 primary_metric = 'AUC_weighted'
 
-automl_config = AutoMLConfig(task='classification', 
-                             preprocess=False,
-                             name=experiment_name,
-                             debug_log='automl_errors.log',
-                             primary_metric=primary_metric,
-                             max_time_sec=1200,
-                             iterations=2,
-                             n_cross_validations=2,
-                             verbosity=logging.INFO,
+automl_config = AutoMLConfig(task = 'classification', 
+                             preprocess = False,
+                             name = experiment_name,
+                             debug_log = 'automl_errors.log',
+                             primary_metric = primary_metric,
+                             max_time_sec = 1200,
+                             iterations = 2,
+                             n_cross_validations = 2,
+                             verbosity = logging.INFO,
                              X = X_train.values, # we convert from pandas to numpy arrays using .vaules
                              y = y_train.values[:, 0], # we convert from pandas to numpy arrays using .vaules
-                             path=project_folder, )
-
+                             path = project_folder, )
 
 local_run = experiment.submit(automl_config, show_output = True)
 
@@ -331,11 +327,11 @@ run_id['run_id'] = best_run.id
 run_id['experiment_name'] = best_run.experiment.name
 
 # save run info 
-os.makedirs('aml_config', exist_ok=True)
+os.makedirs('aml_config', exist_ok = True)
 with open('aml_config/run_id.json', 'w') as outfile:
     json.dump(run_id, outfile)
 
 # upload run info and model (pkl) to def_data_store, so that pipeline mast can access it
-def_data_store.upload(src_dir='aml_config', target_path='aml_config', overwrite=True)
+def_data_store.upload(src_dir = 'aml_config', target_path = 'aml_config', overwrite = True)
 
-def_data_store.upload(src_dir='outputs', target_path='outputs', overwrite=True)
+def_data_store.upload(src_dir = 'outputs', target_path = 'outputs', overwrite = True)

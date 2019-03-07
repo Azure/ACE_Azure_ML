@@ -44,8 +44,6 @@ def do_ad(df, alpha=0.005, max_anoms=0.1, only_last=None, longterm=False, e_valu
     :param direction:
     :return: a pd.Series containing anomalies.  If not an anomaly, entry will be NaN, otherwise the sensor reading
     """
-
-
     results = detect_ts(df,
                         max_anoms=max_anoms,
                         alpha=alpha,
@@ -55,6 +53,7 @@ def do_ad(df, alpha=0.005, max_anoms=0.1, only_last=None, longterm=False, e_valu
                         only_last=only_last)
 
     return results['anoms']['timestamp'].values
+
 
 parser = argparse.ArgumentParser("anom_detect")
 
@@ -67,13 +66,12 @@ os.makedirs(args.output_directory, exist_ok=True)
 # public store of telemetry data
 data_dir = 'https://sethmottstore.blob.core.windows.net/predmaint/'
 
-
 print("Reading data ... ", end="")
 telemetry = pd.read_csv(os.path.join(data_dir, 'telemetry.csv'))
 print("Done.")
 
 print("Adding incremental data...")
-telemetry_incremental = pd.read_csv(os.path.join('CICD/data_sample/', 'telemetry_incremental.csv'))
+telemetry_incremental = pd.read_csv(os.path.join('devops/data_sample/', 'telemetry_incremental.csv'))
 telemetry = telemetry.append(telemetry_incremental, ignore_index=True)
 print("Done.")
 
@@ -81,7 +79,6 @@ print("Parsing datetime...", end="")
 telemetry['datetime'] = pd.to_datetime(telemetry['datetime'], format="%m/%d/%Y %I:%M:%S %p")
 print("Done.")
 
-    
 window_size = 12  # how many measures to include in rolling average
 sensors = telemetry.columns[2:] # sensors are stored in column 2 on
 window_sizes = [window_size] * len(sensors)  # this can be changed to have individual window_sizes for each sensor
@@ -116,5 +113,3 @@ for machine_id in machine_ids[:1]: # TODO: make sure to remove the [:2], this is
         pickle.dump(obj, fp)
         
     t.toc("Processing machine %s took" % machine_id)
-
-

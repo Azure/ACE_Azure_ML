@@ -22,50 +22,50 @@ steps:
     updateConda: false
     createOptions: 'cython==0.29 urllib3<1.24'
 - script: |
-    pip install --user azureml-sdk pandas
+    pip install --user azureml-sdk==1.0.17 pandas
   displayName: 'Install prerequisites'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/pipeline.py'
+  displayName: 'Azure CLI devops/code/pipeline.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/pipeline.py'
+    inlineScript: 'python devops/code/pipeline.py'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/evaluate_model.py'
+  displayName: 'Azure CLI devops/code/evaluate_model.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/evaluate_model.py'
+    inlineScript: 'python devops/code/evaluate_model.py'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/register_model.py'
+  displayName: 'Azure CLI devops/code/register_model.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/register_model.py'
+    inlineScript: 'python devops/code/register_model.py'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/create_scoring_image.py'
+  displayName: 'Azure CLI devops/code/create_scoring_image.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/create_scoring_image.py'
+    inlineScript: 'python devops/code/create_scoring_image.py'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/deploy_aci.py'
+  displayName: 'Azure CLI devops/code/deploy_aci.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/deploy_aci.py'
+    inlineScript: 'python devops/code/deploy_aci.py'
     
 - task: AzureCLI@1
-  displayName: 'Azure CLI CICD/code/aci_service_test.py'
+  displayName: 'Azure CLI devops/code/aci_service_test.py'
   inputs:
     azureSubscription: 'serviceConnection'
     scriptLocation: inlineScript
-    inlineScript: 'python CICD/code/aci_service_test.py'
+    inlineScript: 'python devops/code/aci_service_test.py'
 - script: |
-    python CICD/code/testing/data_test.py CICD/data_sample/predmain_bad_schema.csv
+    python devops/code/testing/data_test.py devops/data_sample/predmain_bad_schema.csv
   displayName: 'Test Schema'
