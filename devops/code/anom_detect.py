@@ -64,7 +64,7 @@ print("output directory: %s" % args.output_directory)
 os.makedirs(args.output_directory, exist_ok=True)
 
 # public store of telemetry data
-data_dir = 'https://sethmottstore.blob.core.windows.net/predmaint/'
+data_dir = 'https://coursematerial.blob.core.windows.net/data/telemetry'
 
 print("Reading data ... ", end="")
 telemetry = pd.read_csv(os.path.join(data_dir, 'telemetry.csv'))

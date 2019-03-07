@@ -45,7 +45,7 @@ import os
 
 def download_data():
     os.makedirs('../data', exist_ok = True)
-    container = 'https://sethmottstore.blob.core.windows.net/predmaint/'
+    container = 'https://coursematerial.blob.core.windows.net/data/telemetry'
     
     urllib.request.urlretrieve(container + 'telemetry.csv', filename='../data/telemetry.csv')
     urllib.request.urlretrieve(container + 'maintenance.csv', filename='../data/maintenance.csv')
