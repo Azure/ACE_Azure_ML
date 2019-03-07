@@ -8,7 +8,7 @@ The material presented here is a deep-dive into how to use the above tools to so
 
 1. Knowledge of basic datascience, machine learning, and artificial intelligence concepts
 1. Moderate skills in coding with Python
-1. An Azure Subscription (unless provided by us)
+1. An Azure Subscription (unless provided to you)
 
 # Getting Started
 
