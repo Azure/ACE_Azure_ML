@@ -1,3 +1,12 @@
+## Proposed 5h agenda
+
+1. [Introduction](../notebooks/1_01_introduction.ipynb)
+2. [Feature Engineering](../notebooks/1_02_feature_engineering.ipynb)
+3. [Logistic Regression](../notebooks/2_01_logistic_regression.ipynb)
+4. [AML getting started](../notebooks/2_03_aml_getting_started.ipynb)
+5. [Automated ML](../notebooks/2_05_automated_ML.ipynb)
+6. [Deployment](../notebooks/2_06_deployment.ipynb)
+
 ## Proposed one-day agenda
 
 ## Proposed two-day agenda
