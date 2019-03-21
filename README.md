@@ -23,6 +23,7 @@ You will need this basic knowledge:
 1. Moderate skills in coding with Python and machine learning using Python. 
 1. Familiarity with Jupyter Notebooks and/or Databricks Notebooks. 
 1. Familiarity with Azure databricks.
+1. Basic skills using Git version control.
 
 If you do not have any of the above pre-requisites, please find below links:
 1.	To Watch: [Data Science for Beginners](https://www.youtube.com/watch?v=gNV9EqwXCpw)
@@ -31,6 +32,7 @@ If you do not have any of the above pre-requisites, please find below links:
 1.	To Watch: [Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough](https://www.youtube.com/watch?v=HW29067qVWk&t=564s)
 1.	To Do: Go to [https://notebooks.azure.com/] and [create and run a Jupyter notebook](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment) with Python 
 1.	To Watch: [Azure Databricks: A brief introduction](https://www.youtube.com/watch?v=cxyUy1bZ9mk&t=1351s)
+1. To Read (10 mins): [Git Handbook](https://guides.github.com/introduction/git-handbook/)
 
 ### Infrastructure
 
