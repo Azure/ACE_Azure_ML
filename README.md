@@ -14,6 +14,16 @@ The material presented here is a deep-dive which combine real-world data science
 - [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)
 - [Example notebooks covering various topics](https://github.com/Azure/MachineLearningNotebooks)
 
+## Pre-requisites
+
+You will need this basic knowledge:
+
+1. An Azure Subscription (unless provided to you).
+2. Knowledge of basic data science and machine learning concepts. [Here](https://www.youtube.com/watch?v=gNV9EqwXCpw) and [here](https://www.youtube.com/watch?v=GBDSBInvz08) you'll find short introductory material.
+3. Moderate skills in coding with Python and machine learning using Python. A good place to start is [here](https://www.youtube.com/watch?v=-Rf4fZDQ0yw&list=PLjgj6kdf_snaw8QnlhK5f3DzFDFKDU5f4).
+4. Familiarity with Jupyter Notebooks and/or Databricks Notebooks, see here. For hands-on experience, log into [Azure Notebooks](https://notebooks.azure.com/) (Azure subscription required) and follow [these instructions](https://docs.microsoft.com/en-us/azure/notebooks/tutorial-create-run-jupyter-notebook).
+5. Familiarity with Azure Databricks, see [here](https://www.youtube.com/watch?v=cxyUy1bZ9mk&t=1351s). If you are not provided with a managed lab environment, then follow [these instructions](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment) for creating one.
+
 ## Contribute
 
 We invite everybody to contribute.
