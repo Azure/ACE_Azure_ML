@@ -7,3 +7,4 @@ mnt_blob_rw.ipynb
 data/*
 .ipynb_checkpoints
 temp
+temp/*
