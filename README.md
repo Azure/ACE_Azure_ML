@@ -16,13 +16,26 @@ The material presented here is a deep-dive which combine real-world data science
 
 ## Pre-requisites
 
+### Knowledge/Skills
+
 You will need this basic knowledge:
+1. Basic data science and machine learning concepts.
+1. Moderate skills in coding with Python and machine learning using Python. 
+1. Familiarity with Jupyter Notebooks and/or Databricks Notebooks. 
+1. Familiarity with Azure databricks.
+
+If you do not have any of the above pre-requisites, please find below links:
+1.	To Watch: [Data Science for Beginners](https://www.youtube.com/watch?v=gNV9EqwXCpw)
+1.	To Watch: [Get Started with Azure Machine Learning](https://www.youtube.com/watch?v=GBDSBInvz08)
+1.	To Watch: [Python for Data Science: Introduction](https://www.youtube.com/watch?v=-Rf4fZDQ0yw&list=PLjgj6kdf_snaw8QnlhK5f3DzFDFKDU5f4)
+1.	To Watch: [Jupyter Notebook Tutorial: Introduction, Setup, and Walkthrough](https://www.youtube.com/watch?v=HW29067qVWk&t=564s)
+1.	To Do: Go to [https://notebooks.azure.com/] and [create and run a Jupyter notebook](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment) with Python 
+1.	To Watch: [Azure Databricks: A brief introduction](https://www.youtube.com/watch?v=cxyUy1bZ9mk&t=1351s)
+
+### Infrastructure
 
 1. An Azure Subscription (unless provided to you).
-2. Knowledge of basic data science and machine learning concepts. [Here](https://www.youtube.com/watch?v=gNV9EqwXCpw) and [here](https://www.youtube.com/watch?v=GBDSBInvz08) you'll find short introductory material.
-3. Moderate skills in coding with Python and machine learning using Python. A good place to start is [here](https://www.youtube.com/watch?v=-Rf4fZDQ0yw&list=PLjgj6kdf_snaw8QnlhK5f3DzFDFKDU5f4).
-4. Familiarity with Jupyter Notebooks and/or Databricks Notebooks, see here. For hands-on experience, log into [Azure Notebooks](https://notebooks.azure.com/) (Azure subscription required) and follow [these instructions](https://docs.microsoft.com/en-us/azure/notebooks/tutorial-create-run-jupyter-notebook).
-5. Familiarity with Azure Databricks, see [here](https://www.youtube.com/watch?v=cxyUy1bZ9mk&t=1351s). If you are not provided with a managed lab environment, then follow [these instructions](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment) for creating one.
+1. If you are not provided with a managed lab environment (course invitation will specify), then follow these [instructions for configuring your development environment](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks) prior to the course or if you do it on your own. You will need an Azure Subscription (unless one is provided to you).
 
 ## Contribute
 
