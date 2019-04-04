@@ -6,6 +6,10 @@ Welcome to the LearnAI training for custom AI delivered as part of our Partner A
 
 The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying and maintaining end-to-end data science and AI solutions.
 
+## Agendas
+
+Please go to [this page](agendas/README.md) to find alternative agendas for this content. 
+
 ## References
 
 - [Azure Databricks](https://azure.microsoft.com/en-us/services/databricks/)
