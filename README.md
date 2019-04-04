@@ -6,6 +6,16 @@ Welcome to the LearnAI training for custom AI delivered as part of our Partner A
 
 The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying and maintaining end-to-end data science and AI solutions.
 
+## Use-Case / Scenario 
+
+- The data scientist has been tasked to develop a predictive maintenance (PdM) solution for a large set of production machines on a manufacturing floor.  
+
+- The data scientist was asked to create a PdM solution that is executed weekly, to develop a maintenance schedule for the next week. 
+
+- Previous experience suggests that anomalies in the telemetry data collected on each machine are indicative of impending catastrophic failures. The data scientist was therefore asked to include anomaly detection in their solution. 
+
+- The organization also asked for a real-time anomaly detection service, to enable immediate machine inspection before the beginning of the next maintenance cycle.  
+
 ## Agendas
 
 Please go to [this page](agendas/README.md) to find alternative agendas for this content. 
