@@ -6,7 +6,11 @@ Welcome to the LearnAI training for custom AI delivered as part of our Partner A
 
 The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying and maintaining end-to-end data science and AI solutions.
 
-## Use-Case / Scenario 
+## Use-Cases
+
+We have two different use-cases (scenarios)
+
+### 1. Anomaly Detection in structured data 
 
 - The data scientist has been tasked to develop a predictive maintenance (PdM) solution for a large set of production machines on a manufacturing floor.  
 
@@ -15,6 +19,10 @@ The material presented here is a deep-dive which combine real-world data science
 - Previous experience suggests that anomalies in the telemetry data collected on each machine are indicative of impending catastrophic failures. The data scientist was therefore asked to include anomaly detection in their solution. 
 
 - The organization also asked for a real-time anomaly detection service, to enable immediate machine inspection before the beginning of the next maintenance cycle.  
+
+### 2. Anomaly Detection in *un*structured data
+
+- This content covers how to use a deep recurrent neural network to detect anomalous behavior in videos.
 
 ## Agendas
 
