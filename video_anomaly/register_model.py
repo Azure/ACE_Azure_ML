@@ -31,24 +31,24 @@ except:
     print("Dir you replace the run_id in the script with that of your hyperdrive run?")
     raise
 
-children = run.get_children()
+# children = run.get_children()
 
-best_metric = 1.0
-best_run_id = ""
+# best_metric = 1.0
+# best_run_id = ""
 
-for child in children:
-    status = child.get_status()
+# for child in children:
+#     status = child.get_status()
     
-    if status == 'Completed':
-        if child.get_metrics()['val_loss'][-1] < best_metric:
-            best_metric = child.get_metrics()['val_loss'][-1]
-            best_run_id = child.get_details()['runId']
+#     if status == 'Completed':
+#         if child.get_metrics()['val_loss'][-1] < best_metric:
+#             best_metric = child.get_metrics()['val_loss'][-1]
+#             best_run_id = child.get_details()['runId']
 
-# get the best run            
-best_run = get_run(experiment=exp, run_id=best_run_id, rehydrate=True)
+# # get the best run            
+# best_run = get_run(experiment=exp, run_id=best_run_id, rehydrate=True)
 
 # register the model
-model = best_run.register_model(model_name='prednet', 
+model = run.register_model(model_name='prednet', 
                                 model_path='outputs')
 
 # Writing the registered model details to /aml_config/model.json

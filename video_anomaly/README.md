@@ -15,6 +15,8 @@ You will learn:
 1. How to prepare video data for deep learning. 
 1. How to perform hyperparameter tuning with [HyperDrive](https://azure.microsoft.com/en-us/blog/experimentation-using-azure-machine-learning/) to improve the performance of you model.
 1. How to deploy a deep neural network as a webservice for video processing. 
+1. How to post-process the output of a Keras model for secondary tasks (here, anomaly detection)
+2. How to define a build pipeline for DevOps.
 
 
 # Pre-requisites
@@ -29,12 +31,11 @@ You will learn:
 
 ## Software Dependencies
 
-- Conda
-- A conda environement (see `environment.yml`) - [Documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+- Various python modules. We recommend working with a conda environement (see `environment.yml`) - [Documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 - VS code [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - X2Go [https://wiki.x2go.org/doku.php](https://wiki.x2go.org/doku.php)
 
-We found that a useful development environement is to have a VM with a GPU and connect to it using X2Go.
+We found that a useful development environment is to have a VM with a GPU and connect to it using X2Go.
 
 ## Hardware Dependencies
 
@@ -43,8 +44,6 @@ A computer with a GPU, Standard NC6 sufficient, faster learning with NC6_v2/3 or
 ## Dataset
 
 [UCSD Anomaly Detection Dataset](http://www.svcl.ucsd.edu/projects/anomaly/dataset.htm)
-
-Download the dataset and store it in a new folder `data` in the root of your clone of this repository. 
 
 ## Agenda
 

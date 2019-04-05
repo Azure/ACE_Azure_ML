@@ -40,7 +40,6 @@ service = Webservice.deploy_from_image(deployment_config = aciconfig,
                                            workspace = ws)
 service.wait_for_deployment(True)
 
-service.wait_for_deployment()
 print('Deployed ACI Webservice: {} \nWebservice Uri: {}'.format(service.name, service.scoring_uri))
 
 #service=Webservice(name ='aciws0622', workspace =ws)

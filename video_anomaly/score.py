@@ -18,8 +18,8 @@ def init():
     # model_root = model_root.strip('model.json')
     print(model_root)
     # load json and create model
-    # json_file = open(os.path.join(model_root, 'model.json'), 'r') # todo, this is going to the real one
-    json_file = open(os.path.join(model_root, 'model', 'model.json'), 'r')
+    json_file = open(os.path.join(model_root, 'model.json'), 'r') # todo, this is going to the real one
+    # json_file = open(os.path.join(model_root, 'model', 'model.json'), 'r')
     model_json = json_file.read()
     json_file.close()
     trained_model = model_from_json(model_json, custom_objects={"PredNet": PredNet})

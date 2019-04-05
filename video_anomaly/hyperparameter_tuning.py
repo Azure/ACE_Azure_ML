@@ -1,33 +1,37 @@
 import os
 import json
 import azureml
+import shutil
 from azureml.core import Workspace
 from azureml.core import Experiment
 from azureml.core.compute import ComputeTarget, AmlCompute
 from azureml.core.compute_target import ComputeTargetException
 from azureml.train.hyperdrive import RandomParameterSampling, BanditPolicy, HyperDriveRunConfig, PrimaryMetricGoal
 from azureml.train.hyperdrive import choice, loguniform
-import shutil
+from azureml.train.dnn import TensorFlow
 
 # check core SDK version number
 print("Azure ML SDK Version: ", azureml.core.VERSION)
 
 # initialize workspace from config.json
 ws = Workspace.from_config()
+
 print('Workspace name: ' + ws.name, 
       'Azure region: ' + ws.location, 
       'Subscription id: ' + ws.subscription_id, 
       'Resource group: ' + ws.resource_group, sep='\n')
 
-script_folder = './scripts'
 data_folder = './data'
 
+# folder for scripts that need to be uploaded to Aml compute target
+script_folder = './scripts'
 os.makedirs(script_folder, exist_ok=True)
 
+# create AML experiment
 exp = Experiment(workspace=ws, name='prednet')
 
+# upload data to default datastore
 ds = ws.get_default_datastore()
-
 ds.upload(src_dir='./data', target_path='prednet', overwrite=False, show_progress=True)
 
 
@@ -59,15 +63,10 @@ shutil.copy('./data_utils.py', script_folder)
 shutil.copy('./prednet.py', script_folder)
 shutil.copy('./keras_utils.py', script_folder)
 
-from azureml.train.dnn import TensorFlow
 
 script_params = {
     '--data-folder': ds.path('prednet').as_mount(),
     '--compute_target': cluster_name
-    # '--batch-size': 50,
-    # '--first-layer-neurons': 300,
-    # '--second-layer-neurons': 100,
-    # '--learning-rate': 0.001
 }
 
 est = TensorFlow(source_directory=script_folder,
@@ -97,22 +96,30 @@ ps = RandomParameterSampling(
     }
 )
 
-policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1, delay_evaluation=20)
+policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)#, delay_evaluation=20)
 
 hdc = HyperDriveRunConfig(estimator=est, 
                           hyperparameter_sampling=ps, 
                           policy=policy, 
                           primary_metric_name='val_loss', 
                           primary_metric_goal=PrimaryMetricGoal.MINIMIZE, 
-                          max_total_runs=50,
-                          max_concurrent_runs=5)
+                          max_total_runs=5,
+                          max_concurrent_runs=50)
 
 hdr = exp.submit(config=hdc)
 
 hdr.wait_for_completion(show_output=True)
 
+best_run = hdr.get_best_run_by_primary_metric()
+best_run_metrics = best_run.get_metrics()
+print(best_run)
+
+# Writing the run id to /aml_config/run_id.json for use by a DevOps pipeline.
+run_id = {}
+run_id['run_id'] = best_run.id
+run_id['experiment_name'] = best_run.experiment.name
 
 # save run info 
 os.makedirs('aml_config', exist_ok = True)
 with open('aml_config/run_id.json', 'w') as outfile:
-    json.dump(hdr.run_id, outfile)
+    json.dump(run_id, outfile)

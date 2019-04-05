@@ -1,15 +1,24 @@
 # Data Preparation
 
+> file: `data_prep.py`
+
+## Download the data
+
+Download the data from the UCSD website and unpack it. 
+
+Create a folder `data` in the `video_anomaly` directory, and copy the folders `UCSDped1` and `UCSDped2` into that folder (e.g. `<project_root>/video_anomaly/data/UCSDpred1`). 
+
+## Data prep
+
 The next step for us is to get our data into shape for training the model.
 
 1. Split the data into sets for training, validation, and testing.
-1. Load the individual images, then:
+2. Load the individual images, then:
     - Resize the image to match the size of our model.
     - Insert them to a numpy array which can be used for training (dimensions: n_images, height, width, depth).
     - Create a second array that contains the folder in which each video frame was stored.
-2. [Hickle](https://github.com/telegraphic/hickle) the created arrays to a binary [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file.
+3. [Hickle](https://github.com/telegraphic/hickle) the created arrays to a binary [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file for faster I/O during training.
 
-> file: `data_prep.py`
 
 ## Data Split
 

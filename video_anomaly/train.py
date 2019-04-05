@@ -65,6 +65,7 @@ if compute_target:
     run = Run.get_context()
 
     run.log('learning_rate', learning_rate)
+    run.log('lr_decay', lr_decay)
     run.log('filter_sizes', filter_sizes)
     run.log('stack_sizes', stack_sizes_arg)
     run.log('batch_size', batch_size)
@@ -84,8 +85,8 @@ N_seq_val = 15  # number of sequences to use for validation
 # settings for training and optimization
 loss_type='mean_absolute_error'
 optimizer_type='adam'
-min_delta=1e-4
-patience=10
+min_delta=1e-1 #1e-4
+patience=2 #10
 save_model = True  # if weights will be saved
 
 
@@ -150,13 +151,14 @@ if save_model:
 # log training results to a file
 callbacks.append(CSVLogger(filename=os.path.join(output_dir, 'train.log'), separator=',', append=False))
 
-class LogRunMetrics(Callback):
-    # callback at the end of every epoch
-    def on_epoch_end(self, epoch, log):
-        # log a value repeated which creates a list
-        run.log('val_loss', log['val_loss'])
+if compute_target:
+    class LogRunMetrics(Callback):
+        # callback at the end of every epoch
+        def on_epoch_end(self, epoch, log):
+            # log a value repeated which creates a list
+            run.log('val_loss', log['val_loss'])
 
-callbacks.append(LogRunMetrics())
+    callbacks.append(LogRunMetrics())
 
 # train the model
 history = model.fit_generator(train_generator, samples_per_epoch / batch_size, nb_epoch, callbacks=callbacks,

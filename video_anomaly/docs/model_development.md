@@ -1,6 +1,8 @@
 # Model Development
 
-Next, we setup our model and train it (file: `train.py`).
+> file: `train.py`
+
+Next, we setup our model and train it.
 
 This involves the following steps:
 1. Define the hyperparameters of your model:

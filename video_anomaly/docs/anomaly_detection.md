@@ -46,6 +46,8 @@ The last step is to save these metrics to a pickled pandas dataframe.
 
 ## Annotate results with labels from test dataset
 
+> `annotate_results.py`
+
 Next, we load the labels for the test dataset to annotate our results.
 
 Our results dataframe (from running `test.py`) contains one row per dataframe and various metrics for the frame, giving us information about how well the model predicted each video frame (e.g. mean squared error).  We want to add a column that tells us for each frame whether this frame contains an anomaly.

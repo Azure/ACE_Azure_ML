@@ -12,7 +12,7 @@ import os
 import numpy as np
 from scipy.misc import imresize, imread
 import hickle as hkl
-from settings import DATA_DIR
+# from settings import DATA_DIR
 import glob
 from sklearn.model_selection import train_test_split
 from PIL import Image
@@ -22,7 +22,7 @@ folders = ['UCSDped1']
 skip_frames = 0
 
 # Recordings used for training and validation
-recordings_parent_folder = os.path.join(DATA_DIR, folders[0])
+recordings_parent_folder = os.path.join('data', folders[0])
 recordings = sorted(glob.glob(os.path.join(recordings_parent_folder, 'Train', 'Train*[0-9]')))
 n_recordings = len(recordings)
 recordings = list(zip([folders[0]] * n_recordings, recordings))
@@ -31,7 +31,7 @@ recordings = list(zip([folders[0]] * n_recordings, recordings))
 train_recordings, val_recordings = train_test_split(recordings, test_size=.2, random_state=123)
 
 # Recordings used for testing
-recordings_parent_folder = os.path.join(DATA_DIR, folders[0])
+recordings_parent_folder = os.path.join('data', folders[0])
 recordings = glob.glob(os.path.join(recordings_parent_folder, 'Test', 'Test*[0-9]'))
 n_recordings = len(recordings)
 test_recordings = sorted(list(zip([folders[0]] * n_recordings, recordings)))
@@ -65,7 +65,10 @@ def process_data():
         # X is 4D w/ axes: n_images, height, width, depth (e.g. rgb, grayscale)
         X = np.zeros((len(im_list),) + desired_im_sz + (3,), np.uint8)
         for i, im_file in enumerate(im_list):
-            im = Image.open(im_file).convert(mode='RGB') #, mode='RGB')
+            try:
+                im = Image.open(im_file).convert(mode='RGB')
+            except:
+                print(im_file)
             # X[i] = np.asarray(im)
             try:
                 X[i] = np.asarray(process_im(im)) # scale and crop image
@@ -73,8 +76,8 @@ def process_data():
                 print(im_file)
                 raise
 
-        hkl.dump(X, os.path.join(DATA_DIR, 'X_' + split + '.hkl')) # save all the data one split in one giant archive
-        hkl.dump(source_list, os.path.join(DATA_DIR, 'sources_' + split + '.hkl'))
+        hkl.dump(X, os.path.join('data', 'X_' + split + '.hkl')) # save all the data one split in one giant archive
+        hkl.dump(source_list, os.path.join('data', 'sources_' + split + '.hkl'))
 
 
 def process_im(im):
