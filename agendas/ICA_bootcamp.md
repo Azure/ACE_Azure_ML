@@ -29,6 +29,6 @@ You can now begin running this notebook from the top. There are two things to no
 
 When you return in the afternoon, you will run the following notebooks (in the following order):
 - `day_1/02_feature_engineering`
-- `day_2/01_logistic regression`
+- `day_2/04_ml_experimentation`
 - `day_2/05_automated_ML`
 - `day_2/06_deployment`
