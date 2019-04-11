@@ -2,7 +2,7 @@
 
 Depending on how much time you have, you could follow the below proposed agendas. 
 
-We also created material for a 3h [hackathon](../hackathon/train-a-better-PdM-model-for-multiclass-using-azure-databricks.ipynb, which could be done after concluding any of the below agendas.
+We also created material for a 3h [hackathon](../hackathon/train-a-better-PdM-model-for-multiclass-using-azure-databricks.ipynb), which could be done after concluding any of the below agendas.
 
 
 ## Proposed three-day agenda
@@ -32,12 +32,12 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 
 1. [Real-time scoring w/ AKS, CI/CD and DevOps (Hands On)](../notebooks/2_06_deployment.ipynb)
 1. [CI/CD and DevOps (Hands On)](../devops/README.md)
-1. [Video Anomaly Detection (VAD) - Overview](../video_anomaly/README.md)
-1. [VAD - Data Prep](../video_anomaly/docs/data_prep_w_pillow.md)
-1. [VAD - Model Development](../video_anomaly/docs/model_development.md)
-1. [VAD - HyperParameter Tuning](../video_anomaly/docs/hyperparameter_tuning.md)
-1. [VAD - Anomaly Detection / Testing](../video_anomaly/docs/anomaly_detection.md)
-1. [VAD - Deployment](../video_anomaly/docs/deployment.md)
+1. [Video Anomaly Detection (VAD) (Overview)](../video_anomaly/README.md)
+1. [VAD - Data Prep (Demo)](../video_anomaly/docs/data_prep_w_pillow.md)
+1. [VAD - Model Development (Hands On)](../video_anomaly/docs/model_development.md)
+1. [VAD - HyperParameter Tuning (Hands On)](../video_anomaly/docs/hyperparameter_tuning.md)
+1. [VAD - Anomaly Detection / Testing (Demo)](../video_anomaly/docs/anomaly_detection.md)
+1. [VAD - Deployment (Demo)](../video_anomaly/docs/deployment.md)
 
 ## Proposed 5h agenda
 
