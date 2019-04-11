@@ -22,6 +22,10 @@ We have two use-cases or scenarios
 
 - This content covers how to use a deep recurrent neural network to detect anomalous behavior in videos.
 
+# Creating a lab environment
+
+Please go to [this page](set_up_lab_environment.md) for instructions on how to set up your lab environment. You must follow these instructions whether you are being provided with a lab account or intend to use your own.
+
 # Agendas
 
 Please go to [this page](agendas/README.md) to find alternative agendas around the above use-cases. 
