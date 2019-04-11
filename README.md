@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the LearnAI training for custom AI delivered as part of our Partner AI Airlifts.
+Welcome to the LearnAI training on Azure Machine Learning (AML) service.
 
 The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying and maintaining end-to-end data science and AI solutions.
 
