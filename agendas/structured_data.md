@@ -1,4 +1,47 @@
+# Alternative agendas
+
+Depending on how much time you have, you could follow the below proposed agendas. 
+
+We also created material for a 3h [hackathon](../hackathon/train-a-better-PdM-model-for-multiclass-using-azure-databricks.ipynb, which could be done after concluding any of the below agendas.
+
+
+## Proposed three-day agenda
+
+We developed this content aiming for a 3-day deep dive with the following agenda.
+
+### day 1
+
+1. [Machine Learning on Azure - Solution Brief (PPTX Presentation)](../slides/Azure Machine Learning Service.pptx) 
+1. [Introduction to Azure Databricks (Hands On)](../notebooks/1_01_introduction.ipynb)
+1. [Feature Engineering (Hands On)](../notebooks/1_02_feature_engineering.ipynb)
+1. [Sentiment Analysis (Hands On)](../notebooks/1_03_sentiment_analysis.ipynb)
+1. [Hyperparameter Tuning w/ Azure Databricks (Hands On)](../notebooks/1_04_hyperparameter_tuning.ipynb)
+1. [Streaming on Azure Databricks (Hands On)](../notebooks/1_05_structured_streaming.ipynb)
+
+### day 2        
+
+1. [Logistic Regression w/ Spark ML (Hands On)](../notebooks/2_01_logistic_regression.ipynb)
+1. [Random Forests w/ Spark ML (Hands On)](../notebooks/2_02_random_forests.ipynb)
+1. [Integration of ADB and AML (PPTX Presentation)](../slides/ADB_AML_integration.pptx)
+1. [Getting Started w/ AML service  (Hands On)](../notebooks/2_03_aml_getting_started.ipynb)
+1. [AML Model Management and ML Experimentation (Hands On)](../notebooks/2_04_ml_experimentation.ipynb)
+1. [Automated ML (Hands On)](../notebooks/2_05_automated_ML.ipynb)
+1. [Real-time scoring w/ AKS, CI/CD and DevOps (PPTX Presentation)](../slides/slides/Azure_DevOps.pptx)
+
+### day 3
+
+1. [Real-time scoring w/ AKS, CI/CD and DevOps (Hands On)](../notebooks/2_06_deployment.ipynb)
+1. [CI/CD and DevOps (Hands On)](../devops/README.md)
+1. [Video Anomaly Detection (VAD) - Overview](../video_anomaly/README.md)
+1. [VAD - Data Prep](../video_anomaly/docs/data_prep_w_pillow.md)
+1. [VAD - Model Development](../video_anomaly/docs/model_development.md)
+1. [VAD - HyperParameter Tuning](../video_anomaly/docs/hyperparameter_tuning.md)
+1. [VAD - Anomaly Detection / Testing](../video_anomaly/docs/anomaly_detection.md)
+1. [VAD - Deployment](../video_anomaly/docs/deployment.md)
+
 ## Proposed 5h agenda
+
+For a 5h agenda, we recommend the following agenda.
 
 1. [Introduction](../notebooks/1_01_introduction.ipynb)
 2. [Feature Engineering](../notebooks/1_02_feature_engineering.ipynb)
@@ -7,41 +50,6 @@
 5. [Automated ML](../notebooks/2_05_automated_ML.ipynb)
 6. [Deployment](../notebooks/2_06_deployment.ipynb)
 
-## Proposed one-day agenda
-
-## Proposed two-day agenda
-
-## Proposed three-day agenda
-
-### day 1
-
-1. Machine Learning on Azure – Solution Brief
-1. Data Prep w/ ADB (1; Hands On)
-1. Data Prep w/ ADB (2; Hands On)
-1. Model Development w/ Spark (1; Hands On)
-1. Model Development w/ Spark (2; Hands On)
-1. Model Development w/ Spark (3; Hands On)
-1. Overview of AML service integration into ADB and capabilities
-
-### day 2        
-
-1. Logistic Regression w/ Spark ML (Hands On)
-1. Random Forests w/ Spark ML (Hands On)
-1. AML Model Management and ML Experimentation (Hands On)
-1. Automated ML (Hands On w/ AML + ADB)
-1. Real-time scoring w/ AKS, CI/CD and DevOps 
-1. Real-time scoring w/ AKS - Deployment to AKS (Hands On)
-1. Recap of CI/CD plan AML Pipelines (Hands On)
-
-### day 3
-
-1. CI/CD and DevOps (Hands On) 
-1. Deep Learning w/ GPUs on AmlCompute (Hands On)
-1. Hyperparameter tuning w/ HyperDrive (Hands On)
-1. Hackathon
-1. Hackathon
-1. Hackathon
-1. Hackathon + Final Discussions
 
 ## About the labs
 
