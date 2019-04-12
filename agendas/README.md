@@ -11,7 +11,7 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 
 ### day 1
 
-1. [Machine Learning on Azure - Solution Brief (PPTX Presentation)](../slides/Azure\ Machine\ Learning\ Service.pptx) 
+1. [Machine Learning on Azure - Solution Brief (PPTX Presentation)](../slides/AML_service.pptx) 
 1. [Introduction to Azure Databricks (Hands On)](../notebooks/1_01_introduction.ipynb)
 1. [Feature Engineering (Hands On)](../notebooks/1_02_feature_engineering.ipynb)
 1. [Sentiment Analysis (Hands On)](../notebooks/1_03_sentiment_analysis.ipynb)
