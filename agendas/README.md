@@ -1,9 +1,12 @@
-# Alternative agendas
+# Alternative Agendas
 
 Depending on how much time you have, you could follow the below proposed agendas. 
 
 We also created material for a 3h [hackathon](../hackathon/train-a-better-PdM-model-for-multiclass-using-azure-databricks.ipynb), which could be done after concluding any of the below agendas.
 
+## Creating a lab environment
+
+Please go to [this page](set_up_lab_environment.md) for instructions on how to set up your lab environment. You must follow these instructions whether you are being provided with a lab account or intend to use your own.
 
 ## Proposed three-day agenda
 
@@ -32,12 +35,7 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 
 1. [Real-time scoring w/ AKS, CI/CD and DevOps (Hands On)](../notebooks/2_06_deployment.ipynb)
 1. [CI/CD and DevOps (Hands On)](../devops/README.md)
-1. [Video Anomaly Detection (VAD) (Overview)](../video_anomaly/README.md)
-1. [VAD - Data Prep (Demo)](../video_anomaly/docs/data_prep_w_pillow.md)
-1. [VAD - Model Development (Hands On)](../video_anomaly/docs/model_development.md)
-1. [VAD - HyperParameter Tuning (Hands On)](../video_anomaly/docs/hyperparameter_tuning.md)
-1. [VAD - Anomaly Detection / Testing (Demo)](../video_anomaly/docs/anomaly_detection.md)
-1. [VAD - Deployment (Demo)](../video_anomaly/docs/deployment.md)
+1. Then continue with 5h on [video anomaly detection](https://github.com/microsoft/MLOps_VideoAnomalyDetection.git)
 
 ## Proposed 5h agenda
 

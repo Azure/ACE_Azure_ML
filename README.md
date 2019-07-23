@@ -2,13 +2,9 @@
 
 Welcome to the LearnAI training on Azure Machine Learning (AML) service.
 
-The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying and maintaining end-to-end data science and AI solutions.
+The material presented here is a deep-dive which combine real-world data science scenarios with many different technologies including Azure Databricks (ADB), Azure Machine Learning (AML) Services and Azure DevOps, with the goal of creating, deploying, and maintaining end-to-end data science and AI solutions.
 
-# Use-Cases
-
-We have two use-cases or scenarios
-
-## 1. Anomaly Detection in structured data 
+# Anomaly Detection in structured data 
 
 - The data scientist has been tasked to develop a predictive maintenance (PdM) solution for a large set of production machines on a manufacturing floor.  
 
@@ -18,9 +14,7 @@ We have two use-cases or scenarios
 
 - The organization also asked for a real-time anomaly detection service, to enable immediate machine inspection before the beginning of the next maintenance cycle.  
 
-## 2. Anomaly Detection in *un*structured data
-
-- This content covers how to use a deep recurrent neural network to detect anomalous behavior in videos.
+> **Note:** Anomaly detection can also be performed on unstructured data.  One example is to detect unusual behavior in videos, like a car driving on a sidewalk, or violation of safety protocols on a manufacturing floor.  If you are interested in this use case, please go to this repo: [https://github.com/Microsoft/MLOps_VideoAnomalyDetection](https://github.com/Microsoft/MLOps_VideoAnomalyDetection)
 
 # Creating a lab environment
 
