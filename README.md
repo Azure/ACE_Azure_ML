@@ -22,7 +22,7 @@ Please go to [this page](set_up_lab_environment.md) for instructions on how to s
 
 # Agendas
 
-Please go to [this page](agendas/README.md) to find alternative agendas around the above use-cases. 
+Please go to [this page](/agendas/README.md) to find alternative agendas around the above use-cases. 
 
 # References
 
