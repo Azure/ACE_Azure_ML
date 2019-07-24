@@ -16,10 +16,6 @@ The material presented here is a deep-dive which combine real-world data science
 
 > **Note:** Anomaly detection can also be performed on unstructured data.  One example is to detect unusual behavior in videos, like a car driving on a sidewalk, or violation of safety protocols on a manufacturing floor.  If you are interested in this use case, please go to this repo: [https://github.com/Microsoft/MLOps_VideoAnomalyDetection](https://github.com/Microsoft/MLOps_VideoAnomalyDetection)
 
-# Creating a lab environment
-
-Please go to [this page](set_up_lab_environment.md) for instructions on how to set up your lab environment. You must follow these instructions whether you are being provided with a lab account or intend to use your own.
-
 # Agendas
 
 Please go to [this page](agendas/README.md) to find alternative agendas around the above use-cases. 
