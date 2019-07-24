@@ -18,7 +18,7 @@ The material presented here is a deep-dive which combine real-world data science
 
 # Creating a lab environment
 
-Please go to [this page](set_up_lab_environment.md) for instructions on how to set up your lab environment. You must follow these instructions whether you are being provided with a lab account or intend to use your own.
+Please go to [this page](agendas/set_up_lab_environment.md) for instructions on how to set up your lab environment. You must follow these instructions whether you are being provided with a lab account or intend to use your own.
 
 # Agendas
 
