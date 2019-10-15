@@ -43,7 +43,7 @@ image.wait_for_creation(show_output = True)
 os.chdir('../../../')
 
 if image.creation_state != 'Succeeded':
-  raise Exception('Image creation status: {image.creation_state}')
+  raise Exception('Image creation status: {} logs: {}'.format(image.creation_state,image.image_build_log_uri))
 
 print('{}(v.{} [{}]) stored at {} with build log {}'.format(image.name, image.version, image.creation_state, image.image_location, image.image_build_log_uri))
 
