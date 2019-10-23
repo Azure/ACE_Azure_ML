@@ -6,14 +6,10 @@ Please follow these [instructions](https://docs.microsoft.com/en-us/azure/machin
 
 ## Import course jupyter notebooks
 
-You can either import the jupyter notebooks one my one, or create a databricks archive that contains all the notebooks, to then import the archive.
+You can import the jupyter notebooks one my one, either by cloning this repository and uploading notebooks from your computer, or by directly importing them using their URL on GitHub.
 
-Follow these simple steps to create a databricks archive
+Make sure you pay attention to the folder structure of the notebooks (i.e. day_1, day_2, and includes folder)
 
-```
-cd <root>/presenter
-zip -0 -r notebooks notebooks
-mv notebooks.zip notebooks.dbc
-```
+## Create a Databricks archive
 
-As you can see, a databricks is simply a zip archive with compression level zero.
+If you are planning to run a workshop with this material, we recommend that you make the life of attendees easier, by exporting the notebooks as a DBC archive, so the students can simply import that archive.
