@@ -18,7 +18,7 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 1. [Introduction to Azure Databricks (Hands On)](../presenter/notebooks/day_1/01_introduction.ipynb)
 1. [Feature Engineering (Hands On)](../presenter/notebooks/day_1/02_feature_engineering.ipynb)
 1. [Sentiment Analysis (Hands On)](../presenter/notebooks/day_1/03_sentiment_analysis.ipynb)
-1. [Hyperparameter Tuning w/ Azure Databricks (Hands On)](../presenter/notebooks/day1/04_hyperparameter_tuning.ipynb)
+1. [Hyperparameter Tuning w/ Azure Databricks (Hands On)](../presenter/notebooks/day_1/04_hyperparameter_tuning.ipynb)
 1. [Streaming on Azure Databricks (Hands On)](../presenter/notebooks/day_1/05_structured_streaming.ipynb)
 
 ### day 2        
@@ -29,11 +29,11 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 1. [Getting Started w/ AML service  (Hands On)](../presenter/notebooks/day_2/03_aml_getting_started.ipynb)
 1. [AML Model Management and ML Experimentation (Hands On)](../presenter/notebooks/day_2/04_ml_experimentation.ipynb)
 1. [Automated ML (Hands On)](../presenter/notebooks/day_2/05_automated_ML.ipynb)
-1. [Real-time scoring w/ AKS, CI/CD and DevOps (PPTX Presentation)](../slides/slides/Azure_DevOps.pptx)
+1. [Real-time scoring w/ AKS, CI/CD and DevOps (PPTX Presentation)](../slides/Azure_DevOps.pptx)
 
 ### day 3
 
-1. [Real-time scoring w/ AKS, CI/CD and DevOps (Hands On)](../presenter/notebooks/day2/06_deployment.ipynb)
+1. [Real-time scoring w/ AKS, CI/CD and DevOps (Hands On)](../presenter/notebooks/day_2/06_deployment.ipynb)
 1. [CI/CD and DevOps (Hands On)](../devops/README.md)
 1. Then continue with 5h on [video anomaly detection](https://github.com/microsoft/MLOps_VideoAnomalyDetection.git)
 
@@ -41,12 +41,12 @@ We developed this content aiming for a 3-day deep dive with the following agenda
 
 For a 5h agenda, we recommend the following agenda.
 
-1. [Introduction](../notebooks/day1/01_introduction.ipynb)
-2. [Feature Engineering](../notebooks/day_1/1_02_feature_engineering.ipynb)
-3. [Logistic Regression](../notebooks/day_2/01_logistic_regression.ipynb)
-4. [AML getting started](../notebooks/day_2/03_aml_getting_started.ipynb)
-5. [Automated ML](../notebooks/day_2/05_automated_ML.ipynb)
-6. [Deployment](../notebooks/day_2/06_deployment.ipynb)
+1. [Introduction](../presenter/notebooks/day_1/01_introduction.ipynb)
+2. [Feature Engineering](../presenter/notebooks/day_1/02_feature_engineering.ipynb)
+3. [Logistic Regression](../presenter/notebooks/day_2/01_logistic_regression.ipynb)
+4. [AML getting started](../presenter/notebooks/day_2/03_aml_getting_started.ipynb)
+5. [Automated ML](../presenter/notebooks/day_2/05_automated_ML.ipynb)
+6. [Deployment](../presenter/notebooks/day_2/06_deployment.ipynb)
 
 
 ## About the labs
