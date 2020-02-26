@@ -51,11 +51,11 @@ If you do not have any of the above pre-requisites, please find below links:
 ### Infrastructure
 
 1. An Azure Subscription (unless provided to you).
-1. If you are not provided with a managed lab environment (course invitation will specify), then follow these [instructions for configuring your development environment](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks) prior to the course or if you do it on your own. You will need an Azure Subscription (unless one is provided to you).
+1. If you are not provided with a managed lab environment (course invitation will specify), then follow these [instructions for configuring your development environment](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-environment#azure-databricks) prior to the course or if you do it on your own. You will need an Azure Subscription (unless one is provided to you). Pay particular attention to version numbers, such as the version of the Spark runtime.
 
 # Contribute
 
 We invite everybody to contribute.
 
-- Email us with questions an comments: `learnai@microsoft.com`
+- Email us with questions an comments: `aace@microsoft.com`
 - Submit issues and comments in our github repository: [https://github.com/Azure/LearnAI-CustomAI-Airlift/issues](https://github.com/Azure/LearnAI-CustomAI-Airlift/issues)
