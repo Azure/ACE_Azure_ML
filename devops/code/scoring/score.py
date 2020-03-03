@@ -149,7 +149,7 @@ def running_avgs(df, sensors, window_size=24, only_copy=False):
             
 def init():
     global model
-    #global prediction_dc
+    global prediction_dc
     global storage_location
 
     storage_location = "/tmp/output"
@@ -168,7 +168,7 @@ def init():
     model_path = Model.get_model_path(model_name = model_name)
     # deserialize the model file back into a sklearn model
     model = joblib.load(model_path)
-    #prediction_dc = ModelDataCollector("automl_model", identifier="predictions", feature_names=["prediction"])
+    prediction_dc = ModelDataCollector("automl_model", designation="predictions", feature_names=["prediction"])
 
     
 def run(rawdata, window=14 * 24):
@@ -292,7 +292,7 @@ def run(rawdata, window=14 * 24):
         
         data = np.array(json_data)
         result = model.predict(data)
-        #prediction_dc.collect(result)
+        prediction_dc.collect(result)
         print ("saving prediction data" + time.strftime("%H:%M:%S"))
     except Exception as e:
         result = str(e)
