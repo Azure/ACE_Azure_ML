@@ -18,6 +18,7 @@ with open("aml_config/run_id.json") as f:
     config = json.load(f)
 
 new_model_run_id = config["run_id"]
+production_model_run_id = ''
 experiment_name = config["experiment_name"]
 exp = Experiment(workspace = ws, name = experiment_name)
 
@@ -48,7 +49,8 @@ except:
   print('This is the first model to be trained, thus nothing to evaluate for now')
 
 run_id = {}
-run_id['run_id'] = ''
+# Use the old production_model_run_id as default
+run_id['run_id'] = production_model_run_id
 # Writing the run id to /aml_config/run_id.json
 if promote_new_model:
   run_id['run_id'] = new_model_run_id

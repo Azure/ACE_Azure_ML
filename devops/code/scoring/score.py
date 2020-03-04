@@ -25,7 +25,6 @@ def create_data_dict(data, sensors):
         if column in sensors:
             data_dict[column + '_avg'] = [0.0]
             data_dict[column + '_an'] = [False]
-
     return data_dict
 
 
