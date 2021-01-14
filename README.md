@@ -1,3 +1,5 @@
+> Disclaimer: This repository is not actively maintained anymore. For an up-to-date introduction to AzureML, please see the official product [documentation](https://docs.microsoft.com/en-us/azure/machine-learning/) and example [notebooks](https://github.com/Azure/MachineLearningNotebooks/).
+
 # Introduction
 
 Welcome to the ACE-team training on Azure Machine Learning (AML) service.
