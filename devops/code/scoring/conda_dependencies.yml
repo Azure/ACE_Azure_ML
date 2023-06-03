@@ -5,9 +5,9 @@ dependencies:
 - python=3.6.2
 - pip:
   - scikit-learn==0.19.1
-  - azureml-sdk[automl]
-  - azureml-monitoring
-  - pyculiarity
-  - scipy
-  - numpy
-  - pandas
+  - azureml-sdk[automl]==1.0.17
+  - azureml-monitoring==0.1.0a17
+  - pyculiarity==0.0.7
+  - scipy==1.0.1
+  - numpy==1.14.0
+  - pandas==0.23.0

@@ -44,7 +44,7 @@ set_diagnostics_collection(send_diagnostics=True)
 
 ############################### create a run config
 
-cd = CondaDependencies.create(pip_packages=["azureml-sdk==1.0.17", "azureml-train-automl==1.0.17", "pyculiarity", "pytictoc", "cryptography==2.5", "pandas"])
+cd = CondaDependencies.create(pip_packages=["azureml-sdk==1.0.17", "azureml-train-automl==1.0.17", "pyculiarity", "pytictoc", "cryptography==2.5", "pandas","tensorflow==1.2"])
 
 amlcompute_run_config = RunConfiguration(framework = "python", conda_dependencies = cd)
 amlcompute_run_config.environment.docker.enabled = False

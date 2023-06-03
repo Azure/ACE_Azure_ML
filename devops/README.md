@@ -7,7 +7,7 @@ In this course, we will implement a Continuous Integration (CI)/Continuous Deliv
 
 In short, the pipeline is designed to kick off for each new commit, run the test suite, if the test passes takes the latest build, packages it in a Docker container and then deploys to create a scoring service as shown below.
 
-![Architecture](images/architecture.png)
+![Architecture](../images/architecture.png)
 
 ## Modules Covered
 

@@ -25,7 +25,6 @@ def create_data_dict(data, sensors):
         if column in sensors:
             data_dict[column + '_avg'] = [0.0]
             data_dict[column + '_an'] = [False]
-
     return data_dict
 
 
@@ -168,7 +167,7 @@ def init():
     model_path = Model.get_model_path(model_name = model_name)
     # deserialize the model file back into a sklearn model
     model = joblib.load(model_path)
-    prediction_dc = ModelDataCollector("automl_model", identifier="predictions", feature_names=["prediction"])
+    prediction_dc = ModelDataCollector("automl_model", designation="predictions", feature_names=["prediction"])
 
     
 def run(rawdata, window=14 * 24):

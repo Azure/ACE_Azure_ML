@@ -45,7 +45,7 @@ import os
 
 def download_data():
     os.makedirs('../data', exist_ok = True)
-    container = 'https://coursematerial.blob.core.windows.net/data/telemetry/'
+    container = 'https://dataandaiworkshop.blob.core.windows.net/bootcamp/telemetry/'
     
     urllib.request.urlretrieve(container + 'telemetry.csv', filename='../data/telemetry.csv')
     urllib.request.urlretrieve(container + 'maintenance.csv', filename='../data/maintenance.csv')
